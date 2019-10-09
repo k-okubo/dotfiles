@@ -60,10 +60,6 @@ set smartcase
 
 nnoremap <silent> <leader>sh :terminal<CR>
 nnoremap <silent> <leader><space> :noh<CR>
-noremap <C-j> <C-w>j
-noremap <C-k> <C-w>k
-noremap <C-l> <C-w>l
-noremap <C-h> <C-w>h
 noremap <leader>w :bp<CR>
 noremap <leader>e :bn<CR>
 noremap <leader>q :bn<CR>:bd #<CR>
@@ -86,7 +82,7 @@ set titlestring=%F
 set laststatus=2
 set statusline=%F%m%r%h%w%=(%{&ff}/%Y)\ (line\ %l\/%L,\ col\ %c)
 
-if &term == "xterm-256color"
+if &t_Co == "256"
   colorscheme molokai
   highlight Directory ctermfg=112
   highlight Function ctermfg=112
